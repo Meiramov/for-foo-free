@@ -1,0 +1,204 @@
+@font-face{
+    font-family: Calibri;
+    src: url(../fonts/Calibri.ttf);
+}
+
+@font-face{
+    font-family: NotoSans;
+    src: url(../fonts/NotoSans.ttf);
+}
+
+.all{
+	height: 385px;
+}
+
+#slider { /*положение слайдера*/
+    position: relative;
+	text-align: center;
+}
+
+#slider{ /*центровка слайдера*/
+	margin: 0 auto;
+}
+
+#slides article{ /*все изображения справа друг от доруга*/
+	width: 20%;
+	float: left;
+}
+
+#slides .image{ /*устанавливает общий размер блока с изображениями*/
+	width: 500%;
+	line-height: 0;
+}
+
+#overflow{ /*сркывает все, что находится за пределами этого блока*/
+	width: 100%;
+	overflow: hidden;
+}
+
+article img{ /*размер изображений слайдера*/
+	width: 100%;
+	z-index: 0;
+}
+
+#desktop:checked ~ #slider{ /*размер всего слайдера*/
+	max-width: 1240px; /*максимальнная длинна*/
+}
+
+label, a{ /*при наведении на стрелки или переключатели - курсор изменится*/
+	cursor: pointer;
+}
+
+.all input{ /*скрывает стандартные инпуты (чекбоксы) на странице*/
+	display: none;
+}
+
+#controls{ /*положение блока всех управляющих элементов*/
+	margin: 0 0 0 0;
+	width: 100%;
+	height: 50px;
+	position: relative;
+	z-index: 2;
+}
+
+#active a{ /*стиль отдельного переключателя*/
+	display: inline-block; /*расположение в строку*/
+	width: 20px;
+	height: 3px;
+	background: #848588;
+}
+
+#active{ /*расположение блока с переключателями*/
+	position: absolute;
+	left: 86%;
+	top: 380px;
+	text-align: center;
+	z-index: 2;
+}
+
+#active a:hover{ /*поведение чекбокса при наведении*/
+	background: #8e2425;
+}
+
+
+#active a.active {
+    background: #8e2425;
+}
+
+#slides .image{ /*анимация пролистывания изображений*/
+	transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+#controls label:hover{ /*прозрачность стрелок при наведении*/
+	opacity: 0.6;
+}
+
+#controls label{ /*прозрачность стрелок при отводе курсора*/
+	transition: opacity 0.2s ease-out;
+}
+
+
+.image article .paragraph{
+	background-color: #ddd;
+	opacity: 0.5;
+	height: 110px;
+	width: 1240px;
+	z-index: 0;
+	position: absolute;
+	bottom: 0;
+}
+
+.image article h2{
+	float: left;
+	font-family: NotoSans;
+	font-size: 25px;
+	font-weight: bold;
+	line-height: 30px;
+	margin: 5px 10% 0 15px;
+	text-transform: uppercase;
+	width: 85%;
+	position: relative;
+	z-index: 2;
+}
+
+.image article p{
+	float: left;
+	font-family: Calibri;
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 20px;
+	margin: 0 0 0 50px;
+	position: relative;
+	z-index: 2;
+}
+
+article .textas{
+	height: 20px;
+	width: 990px;
+	padding: 25px 0 0 0;
+	position: absolute;
+	bottom: 65px;
+}
+
+.linked-news{
+	color: inherit;
+}
+
+.b-controls{
+	margin: 0 0 0 0;
+	width: 100%;
+	height: 50px;
+	position: relative;
+	z-index: 2;
+}
+
+.b-active a{
+	display: inline-block;
+	width: 20px;
+	height: 3px;
+	background: #848588;
+}
+
+.b-active{
+	position: absolute;
+	left: 86%;
+	top: 1300px;
+	text-align: center;
+	z-index: 2;
+}
+
+.b-active a:hover{
+	background: #8e2425;
+}
+
+
+.c-active a.active {
+    background: #8e2425;
+}
+
+.c-active a{
+	display: inline-block;
+	width: 20px;
+	height: 3px;
+	background: #848588;
+}
+
+.c-active{
+	position: absolute;
+	left: 86%;
+	top: 1695px;
+	text-align: center;
+	z-index: 2;
+}
+
+.c-active a:hover{
+	background: #8e2425;
+}
+
+
+.c-active a.active {
+    background: #8e2425;
+}
